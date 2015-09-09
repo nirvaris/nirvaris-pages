@@ -1,14 +1,2 @@
-{% extends "base.html" %}
-{% load i18n %}
 
-{% block head_title %}{{ page.title }}{% endblock %}
-
-{% block body_class %}home{% endblock %}
-
-{% block search %}
-{% include 'header-home-search.html' %}
-{% endblock %}
-
-{% block content %}
 {{ page.content|safe }}
-{% endblock %}
