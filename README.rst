@@ -13,7 +13,7 @@ To install the Pages, use pip from git:
 
 pip install git+https://github.com/nirvaris/nirvaris-pages
 
-1. Add "style-snippet" to your INSTALLED_APPS setting like this::
+1. Add "pages" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...
