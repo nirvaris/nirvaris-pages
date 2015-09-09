@@ -8,14 +8,14 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='nirvaris-style-snippet',
+    name='nirvaris-pages',
     version='0.1',
-    packages=['style-snippet'],
+    packages=['pages'],
     include_package_data=True,
     license='MIT License',  # example license
-    description='A simple Django app to style forms and messages.',
+    description='A simple Django app to shave pages in the website with some meta-tags.',
     long_description=README,
-    url='https://github.com/nirvaris/nirvaris-style-snippet',
+    url='https://github.com/nirvaris/nirvaris-pages',
     author='Juliano Binder',
     author_email='juliano.binder@gmail.com',
     classifiers=[
