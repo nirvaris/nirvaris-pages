@@ -29,3 +29,5 @@ pip install git+https://github.com/nirvaris/nirvaris-pages
 	<your-url>/pages/<relative_url>
 	
 	relative_url is a page field you set when you add a page via django admin
+	
+5. you have to add the url to your urls file:  url(r'^page/', include('pages.urls')),
