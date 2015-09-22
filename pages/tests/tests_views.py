@@ -1,7 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.test import TestCase, Client
 
-from ..models import Page
+from ..models import Page, MetaTag
 
 
 class PageViewTestCase(TestCase):
@@ -37,4 +37,15 @@ class PageViewTestCase(TestCase):
         
         page = Page(relative_url='home',content='<p>This is the page content</p>',template='page-default.html')
         page.save();
+        
+        
+        meta_tag = MetaTag(page=page, name='keywords',content='some key words')
+        meta_tag.save()
+        
+        meta_tag = MetaTag(page=page, name='description',content='some description')
+        meta_tag.save()        
+        
+        meta_tag = MetaTag(page=page, property='twitter:card',content='sumary')
+        meta_tag.save()
+                
         return page
