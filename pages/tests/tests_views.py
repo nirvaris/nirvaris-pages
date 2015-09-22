@@ -35,6 +35,8 @@ class PageViewTestCase(TestCase):
         
         self.assertEquals(response.status_code,200,'should not give any error')
         
+        self.assertTrue(any('page-does-not-exist.html' in t.name for t in response.templates))
+        
     def _create_page(self):
         
         page = Page(relative_url='home',content='<p>This is the page content</p>',template='page-default.html')
