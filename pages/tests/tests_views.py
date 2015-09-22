@@ -40,7 +40,6 @@ class PageViewTestCase(TestCase):
         page = Page(relative_url='home',content='<p>This is the page content</p>',template='page-default.html')
         page.save();
         
-        
         meta_tag = MetaTag(page=page, name='keywords',content='some key words')
         meta_tag.save()
         
