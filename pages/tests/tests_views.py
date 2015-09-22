@@ -23,6 +23,8 @@ class PageViewTestCase(TestCase):
         
         self.assertTrue(isinstance(response.context['page'], Page))
         
+        self.assertTrue(any(self.page.template in t.name for t in response.templates))
+        
         self.assertIn(self.page.content, str(response.content))
 
     def test_get_invalid_page_view(self):
