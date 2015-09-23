@@ -1,3 +1,5 @@
+import re
+
 from django.core.urlresolvers import reverse
 from django.test import TestCase, Client
 
@@ -26,6 +28,23 @@ class PageViewTestCase(TestCase):
         self.assertTrue(any(self.page.template in t.name for t in response.templates))
         
         self.assertIn(self.page.content, str(response.content))
+        
+    def test_get_page_meta_tags(self):
+        
+        c = self.c
+
+        response = c.get('/pages/home')
+        
+        content = str(response.content)        
+        
+        self.assertTrue(re.search(re.compile('<meta.+?name="keywords"'), content),
+        'Meta tag name not found')
+
+        self.assertTrue(re.search(re.compile('<meta.+?name="description"'), content),
+        'Meta tag description not found')
+
+        self.assertTrue(re.search(re.compile('<meta.+?property="twitter:card"'), content),
+        'Meta tag twitter:card not found')
 
     def test_get_invalid_page_view(self):
 
