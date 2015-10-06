@@ -1,190 +1,39 @@
-/***********************************************************/
-/* General */
-/***********************************************************/
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 body {
-	font-family: 'Lato', sans-serif;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
 }
-a {
-	color: #009933;
-	-webkit-transition: all 700ms;
-	transition: all 700ms;
-}
-a,a:hover {
-	text-decoration: none;
-}
-textarea:focus, input:focus{
-    outline: 0;
-}
-
-/********************************************************************/
-/*  Header  */
-/********************************************************************/
-.navbar {
-	background: #fff;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-.navbar-top {
-	height: 140px;
-}
-.navbar-header {
-	padding-top: 30px;
-}
-.navbar-brand {
-	height: auto;
-}
-#navbar {
-	padding-top: 50px;
-}
-.navbar .navbar-nav>li>a {
-	color: #404040;
-}
-.navbar .navbar-nav>li>a:hover, 
-.navbar .navbar-nav>li>a:focus {
-	color: #99cc00;
-}
-.nav>li>a:focus, 
-.nav>li>a:hover,
-.nav .open>a, 
-.nav .open>a:focus, 
-.nav .open>a:hover
- {
-    background: none;
-}
-
-
-
-/********************************************************************/
-/*  Header Search  */
-/********************************************************************/
-.search {
-	padding-top: 140px;
-}
-.search .wrapper {
-	height: 274px;
-	padding-top: 45px;
-	background-image: url('../image/header-bg.jpg');
-}
-.search h4 {
-	color: #fff;
-	text-align: center;
-	margin-bottom: 20px;
-}
-.search input[type="text"] {
-	color: #6e6c6c;
-	font-size: 16px;
-    display: block;
-    width: 76%;
-    margin: 0 auto;
-    padding: 20px 20px 20px 55px;
-    background: #fff url('../image/icon-search.png') no-repeat 20px center;
-}
-.search input[type="text"]:focus {
-	
-}
-.dtg-alphabetical-search {
-    margin: 15px 0 0 0;
-}
-.dtg-alphabetical-search-wrap {
-    margin: 0 auto;
-    float: none;
-    display: block;
-    overflow: hidden;
-    max-width: 754px;
-}
-.dtg-alphabetical-search-list {
-    list-style: none;
-    padding: 0;
-    display: block;
-    overflow: hidden;
-    margin: 0;
-}
-.dtg-alphabetical-search-list li {
-    float: left;
-	padding: 5px 0;
-    margin-right: 5px;
-}
-.dtg-alphabetical-search-list li:hover {
-    background: #fff;
-}
-.dtg-alphabetical-search-list li:hover a {
-    color: #000;
-}
-.dtg-alphabetical-search-list li a {
-    width: 24px;
-    display: block;
-    color: #fff;
-	font-size: 16px;
-    text-align: center;
-}
-
-
-/********************************************************************/
-/*  Content  */
-/********************************************************************/
-.content {
-	padding: 35px 0 70px;
-}
-
-
-
-/********************************************************************/
-/*  Footer  */
-/********************************************************************/
 .footer {
-	height: 371px;
-}
-.footer-widgets {
-    background: #f5f5f5;
-    padding: 55px 0;
-    font-size: 14px;
-    line-height: 22px;
-}
-.footer-widgets ul {
-    padding: 0;
-    margin: 0;
-    list-style: square;
-    list-style-position: inside;
-    list-style: none;
-}
-.footer-bottom {
-    background: #333;
-    color: #fff;
-    padding: 15px 0;
-}
-.footer-social {
-	margin-top: 20px;
-}
-.footer-social ul {
-    margin: 0;
-    list-style-type: none;
-	float: right;
-}
-.footer-social ul li {
-    float: left;
-    margin-left: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
 }
 
 
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
 
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
 
-/********************************************************************/
-/*  FORMS  */
-/********************************************************************/
-/* required */
-.form-group.required label:after {
-    content: '  *';
-    color: #A94442;
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
-/* error list */
-.form-error-list {
-    margin: 2px 0 3px;
-    padding: 0;
-    list-style-type: none;
-    -webkit-transition: all .3s ease-in;
-}
-.form-error-list li {
-    color: #A94442;
-}
-.has-error .help-block {
-    color: #737373;
+
+code {
+  font-size: 80%;
 }

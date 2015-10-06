@@ -1,29 +1,23 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
-<html lang="en" ng-app="dtgApp">
+<html lang="en">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	{% include 'head-meta-page.html' %}
-	
-    <link rel="icon" href="{% static 'image/fav.png' %}">
-    <title>{% block head_title %}Dicionário Ilustrado Tupi-Guarani{% endblock %}</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="{% static 'js/angular/angular.min.js' %}"></script>
-	<script src="{% static 'js/angular-sanitize/angular-sanitize.js' %}"></script>
-	<script src="{% static 'js/app.js' %}"></script>
-
+	<link rel="icon" href="{% static 'image/fav.png' %}">
+    <title>{% block head_title %}Nirvaris Pages{% endblock %}</title>
     {% include 'head-css.html' %}
 </head>
-<body class="{% block body_class %}{% endblock %}" ng-controller="SearchFormTemplateCtrl">
+<body class="{% block body_class %}{% endblock %}">
 	<section class="main">
-		<nav class="navbar navbar-fixed-top">
+		<nav class="navbar navbar-default navbar-fixed-top">
 			{% include 'navbar.html' %}
-		</nav>		
+		</nav>
 		<!-- End .navbar -->
+		
 		<section class="content">
 			<div class="container">
 				{% block content %}
