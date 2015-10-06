@@ -103,5 +103,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    '/Users/jb/Documents/python_projects/nirvaris-pages/static-files/',
+    os.path.join(BASE_DIR, 'tatic-files'),
 )
