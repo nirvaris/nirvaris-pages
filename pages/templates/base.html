@@ -1,0 +1,48 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" ng-app="dtgApp">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	{% include 'head-meta-page.html' %}
+	
+    <link rel="icon" href="{% static 'image/fav.png' %}">
+    <title>{% block head_title %}Dicionário Ilustrado Tupi-Guarani{% endblock %}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="{% static 'js/angular/angular.min.js' %}"></script>
+	<script src="{% static 'js/angular-sanitize/angular-sanitize.js' %}"></script>
+	<!--<script src="{% static 'js/angular-resource/angular-resource.js' %}"></script>-->
+	
+	<script src="{% static 'js/app.js' %}"></script>
+
+    {% include 'head-css.html' %}
+</head>
+<body class="{% block body_class %}{% endblock %}" ng-controller="SearchFormTemplateCtrl">
+	<section class="main">
+		<nav class="navbar navbar-fixed-top">
+			{% include 'navbar.html' %}
+		</nav>		
+		<!-- End .navbar -->
+
+		
+		<div class="phon"></div>
+		
+		<section class="content">
+			<div class="container">
+				{% block content %}
+				{% endblock %}
+			</div>
+		</section>
+		<!-- End .content -->
+    
+		{% include 'footer.html' %}
+		<!-- End footer -->
+	</section>
+    {% include 'footer-javascript.html' %}
+	<!-- Scripts -->
+	</body>
+</html>
