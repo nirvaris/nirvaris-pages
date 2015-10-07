@@ -12,24 +12,23 @@
     {% include 'head-css.html' %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
-	<section class="main">
-		<nav class="navbar navbar-default navbar-fixed-top">
-			{% include 'navbar.html' %}
-		</nav>
-		<!-- End .navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		{% include 'navbar.html' %}
+	</nav>
+	<!-- End .navbar -->
 		
-		<section class="content">
-			<div class="container">
-				{% block content %}
-				{% endblock %}
-			</div>
-		</section>
-		<!-- End .content -->
-    
-		{% include 'footer.html' %}
-		<!-- End footer -->
+	<section class="content">
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
 	</section>
-    {% include 'footer-javascript.html' %}
+	<!-- End .content -->
+    
+	{% include 'footer.html' %}
+	<!-- End footer -->
+
+	{% include 'footer-javascript.html' %}
 	<!-- Scripts -->
-	</body>
+</body>
 </html>
