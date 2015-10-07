@@ -3,9 +3,10 @@
 
 {% block head_title %}{{ page.title }}{% endblock %}
 
-{% block search %}
-{% include 'header-home-search.html' %}
+{% block item-meta-tag %}
+{% include 'head-meta-item.html' with item=page %}
 {% endblock %}
+
 
 {% block content %}
 {{ page.content|safe }}
