@@ -3,3 +3,10 @@
 body > .content > .container {
   padding: 60px 15px 0;
 }
+
+.navbar-brand {
+    padding-top: 12px;
+}
+.navbar-brand img {
+    width: 110px;
+}
