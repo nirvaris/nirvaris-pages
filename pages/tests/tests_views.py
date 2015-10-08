@@ -1,3 +1,4 @@
+import pdb
 import re
 
 from django.core.urlresolvers import reverse
@@ -27,7 +28,13 @@ class PageViewTestCase(TestCase):
         
         self.assertTrue(any(self.page.template in t.name for t in response.templates))
         
-        self.assertIn(self.page.content, str(response.content))
+        content = str(response.content)
+        
+        self.assertIn(self.page.content, content)
+        #pdb.set_trace()
+        
+        self.assertTrue(re.search(re.compile('<title>.*' + self.page.title + '.*</title>'), content),
+        'page title does not match')
         
     def test_get_page_meta_tags(self):
         
@@ -58,7 +65,7 @@ class PageViewTestCase(TestCase):
         
     def _create_page(self):
         
-        page = Page(relative_url='home',content='<p>This is the page content</p>',template='page-default.html')
+        page = Page(relative_url='home',title='Home Page',content='<p>This is the page content</p>',template='page-default.html')
         page.save();
         
         meta_tag = MetaTag(page=page, name='keywords',content='some key words')
