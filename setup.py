@@ -1,7 +1,7 @@
 import os
 from setuptools import setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
 
 # allow setup.py to be run from any path
@@ -9,15 +9,15 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='nirvaris-pages',
-    version='0.903',
+    version='0.905',
     packages=['pages'],
     include_package_data=True,
     license='MIT License',  # example license
     description='A simple Django app to shave pages in the website with some meta-tags.',
     long_description=README,
     url='https://github.com/nirvaris/nirvaris-pages',
-    author='Juliano Binder',
-    author_email='juliano.binder@gmail.com',
+    author='Nirvaris',
+    author_email='contact@nirvaris.com',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
