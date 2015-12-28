@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='nirvaris-pages',
-    version='0.905',
+    version='0.9.1',
     packages=['pages'],
     include_package_data=True,
     license='MIT License',  # example license
